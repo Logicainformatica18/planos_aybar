@@ -108,7 +108,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('CustomerEdit', [App\Http\Controllers\CustomerController::class, 'edit'])->middleware('permission:administrar|editar');
     Route::post('CustomerUpdate', [App\Http\Controllers\CustomerController::class, 'update'])->middleware('permission:administrar|actualizar');
 
-    Route::get('admin/imagenes', [App\Http\Controllers\ImageController::class, 'index'])->middleware('permission:administrar|imagenes');
+    Route::get('admin/recursos', [App\Http\Controllers\ImageController::class, 'index'])->middleware('permission:administrar|recursos');
     Route::post('ImageStore', [App\Http\Controllers\ImageController::class, 'store'])->middleware('permission:administrar|agregar');
     Route::post('ImageDestroy', [App\Http\Controllers\ImageController::class, 'destroy'])->middleware('permission:administrar|eliminar');
     Route::post('ImageEdit', [App\Http\Controllers\ImageController::class, 'edit'])->middleware('permission:administrar|editar');

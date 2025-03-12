@@ -83,7 +83,7 @@
                                 <option value="ica">Ica</option>
                                 <option value="huacho">Huacho</option>
                                 <option value="huaral">Huaral</option>
-                                
+
                             </select>
                             <label>URL:</label>
                             <input type="text" name="detail" id="detail" class="form-control">
@@ -158,7 +158,7 @@
                                 </div>
                             </div>
                             <!-- Videos -->
-                            <div class="accordion-item">
+                            {{-- <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingVideos">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapseVideos" aria-expanded="false"
@@ -181,7 +181,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                             <!-- Subproyectos -->
 
                             <div class="accordion-item">

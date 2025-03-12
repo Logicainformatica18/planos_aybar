@@ -168,8 +168,7 @@ function topicPublic() {
                   <h6 class='fs-3' style="color: #f8b400; text-align: left; padding-top: 25px; margin-left: 10px;">
                     ${item.description}
                   </h6>
-                  <p class='fs-2' style=' margin-left: 10px;'>El espacio perfecto para tus proyectos. <br>
-Contáctanos para más información.</p>
+                  <p class='fs-2' style=' margin-left: 10px;'>${item.detail}</p>
                 </div>
 
                 <!-- Contenido en hover (aparece al pasar el mouse) -->

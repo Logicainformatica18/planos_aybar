@@ -20,19 +20,13 @@ class PermissionsSeeder extends Seeder
     public function run(): void
     {
         //permisos
-        Permission::create(['name' => 'clientes']);
+
         Permission::create(['name' => 'usuarios']);
         Permission::create(['name' => 'blogs']);
         Permission::create(['name' => 'proyectos']);
-        Permission::create(['name' => 'imagenes']);
-      
-        Permission::create(['name' => 'secciones']);
-        Permission::create(['name' => 'editar_plantilla']);
-        Permission::create(['name' => 'editar_inicio']);
-        Permission::create(['name' => 'editar_nosotros']);
-        Permission::create(['name' => 'editar_blog']);
-        Permission::create(['name' => 'editar_proyectos']);
-        Permission::create(['name' => 'editar_contactos']);
+        Permission::create(['name' => 'recursos']);
+
+
 
         Permission::create(['name' => 'agregar']);
         Permission::create(['name' => 'editar']);
@@ -74,7 +68,7 @@ class PermissionsSeeder extends Seeder
             'sex' => 'M',
             'email' => 'admin1@gmail.com',
         ]);
-        
+
 
     }
 

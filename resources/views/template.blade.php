@@ -192,17 +192,17 @@
                                             </ul>
                                         </li>
                                     @endcanany
-                                    @canany(['administrar', 'imagenes'])
+                                    @canany(['administrar', 'recursos'])
                                         <li class="sidebar-item">
                                             <a class="sidebar-link has-arrow " href="javascript:void(0)"
                                                 aria-expanded="false">
                                                 <iconify-icon icon="solar:shield-user-line-duotone"></iconify-icon>
-                                                <span class="hide-menu">Imágenes</span>
+                                                <span class="hide-menu">Recursos</span>
                                             </a>
                                             <ul aria-expanded="false" class="collapse first-level">
                                                 <li class="sidebar-item">
-                                                    <a class="sidebar-link" href="{{ url('admin/imagenes') }}">
-                                                        <span class="icon-small"></span> Imágenes
+                                                    <a class="sidebar-link" href="{{ url('admin/recursos') }}">
+                                                        <span class="icon-small"></span> Recursos
                                                     </a>
                                                 </li>
 
@@ -211,6 +211,12 @@
                                             </ul>
                                         </li>
                                     @endcanany
+                                    <li class="sidebar-item">
+                                        <a class="sidebar-link" href="/proyectos" aria-expanded="false">
+                                            <iconify-icon icon="solar:atom-line-duotone"></iconify-icon>
+                                            <span class="hide-menu">Ver Proyectos</span>
+                                        </a>
+                                    </li>
                                     {{-- <li class="sidebar-item">
                                         <a class="sidebar-link has-arrow " href="javascript:void(0)"
                                             aria-expanded="false">
@@ -367,7 +373,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="message-body">
-                                                    <a href="admin"
+                                                    <a href="{{url('admin')}}"
                                                         class="p-2 dropdown-item h6 rounded-1">
                                                         Mi Perfil
                                                     </a>

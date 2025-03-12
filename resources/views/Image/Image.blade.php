@@ -6,7 +6,7 @@
                 <div class="row align-items-center">
                     <div class="col-12">
                         <div class="d-sm-flex align-items-center justify-space-between">
-                            <h1 class="text-primary">Imágenes</h1>
+                            <h1 class="text-primary">Recursos</h1>
                             <nav aria-label="breadcrumb" class="ms-auto">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item d-flex align-items-center">
@@ -16,7 +16,7 @@
                                     </li>
                                     <li class="breadcrumb-item" aria-current="page">
                                         <span class="badge fw-medium fs-2 bg-primary-subtle text-primary">
-                                            Imágenes
+                                            Recursos
                                         </span>
                                     </li>
                                 </ol>
@@ -43,7 +43,7 @@
                             @endcanany
                             @canany(['administrar', 'eliminar'])
                             <button type="button" class="btn mb-1 me-1 btn-danger"
-                               
+
                                 onclick="ImageDestroyAll();return false">
                                 Eliminar selección
                             </button>
@@ -90,7 +90,7 @@
                 <div class="modal-content">
                     <div class="modal-header modal-colored-header bg-success text-white">
                         <h4 class="modal-title text-white" id="success-header-modalLabel">
-                            Imágenes
+                            Recursos
                         </h4>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                             aria-label="Close"></button>

@@ -1,44 +1,8 @@
 @extends('production.1')
 @section('content')
-    <div class="">
-        <div class="container-fluid p-0">
-            <center>
-
-                <!-- Fondo con video o imagen -->
-                <lite-youtube videoid="{{ $Project->video_1 }}" posterquality style="width: 100%;height:400px"autopause
-                    class=" " title="Play: Video"></lite-youtube>
-            </center>
-
-        </div>
-    </div>
-
-    <div class="py-0 container-fluid text-center " style="background-color: white;margin-top:-5%">
-        <div class="row content-align-center d-flex justify-content-center">
-
-
-            <div class="col-sm-12 col-xl-3 pt-5 pb-4"style="background-color:#FFA726;position:relative;border-radius:20px">
-                <h3 class="fs-5 mt-4 ">SEPARA TU LOTE DESDE</h3>
-                <h2 class="f-bold display-3 mb-4">S/ 15,000</h2>
-            </div>
-            <div class="d-none d-xl-block  col-xl-1 pt-5 pb-4"style="margin-top:-3%;position:relative;width:10px ">
-                <!-- Línea divisora -->
-
-            </div>
-            <div class="d-none d-xl-block  col-xl-4 pt-5 pb-4"
-                style="background-color: #fcfcfc;position:relative;border-radius:20px">
-                <h2 class="fs-5 mt-4">SEPARA TU LOTE DESDE</h2>
-                <h2 class="fw-bold display-3 mb-4">PRE VENTA</h2>
-            </div>
-
-        </div>
 
 
 
-
-
-
-
-    </div>
     <!-- Botón 1 -->
 
 
@@ -60,11 +24,11 @@
 
     <div class="py-1 my-5">
         <h4 class="d-sm-none text-center display-6" style="margin:20px;font-family:Montserrat-SemiBold;letter-spacing:2px">
-            <span style="color:#03424E">UBICACIÓN DE </span><br> {{ Str::upper($Project->title) }}
+            <span style="color:#03424E">PLANOS Y PROYECTOS DE </span><br> {{ Str::upper($Project->title) }}
         </h4>
         <h4 class="d-none d-sm-block text-center display-6 mt-3"
             style="margin:20px;font-family:Montserrat-SemiBold;letter-spacing:15px">
-            <span style="color:#03424E">UBICACIÓN DE </span><br> {{ Str::upper($Project->title) }}
+            <span style="color:#03424E">PLANOS Y PROYECTOS DE </span><br> {{ Str::upper($Project->title) }}
         </h4>
         <div class="subrayado mx-auto " style="margin-top:-13px"></div>
 
@@ -107,151 +71,18 @@
         </div>
     </div>
 
-    <img src="../resource/{{ $Project->map_1 }}"width="100%" alt="" srcset="">
+    {{-- <img src="../resource/{{ $Project->map_1 }}"width="100%" alt="" srcset=""> --}}
 
 
 
     <p></p>
 
 
-    <h4 class="mt-2 d-sm-none text-center display-6" style="margin:20px;font-family:Montserrat-SemiBold;letter-spacing:2px">
-        <span style="color:#03424E">OFRECEMOS </span> 
-    </h4>
-    <h4 class="mt-5 d-none d-sm-block text-center display-6 mt-3"
-        style="margin:20px;font-family:Montserrat-SemiBold;letter-spacing:15px">
-        <span style="color:#03424E">OFRECEMOS </span> 
-    </h4>
-    <div class="subrayado mx-auto " style="margin-top:-13px"></div>
-
-    <!-- Contenedor del video con contenido centrado -->
-    <div class=" d-flex justify-content-center align-items-center text-center"
-        style="position: relative; height: 40vh; overflow: hidden;">
-
-        <!-- Video de fondo -->
-
-
-        <!-- Contenido sobre el video -->
-        <div style="position: relative; z-index: 1; color: white;">
 
 
 
-            <!-- Carrusel para tamaño md -->
-            <div id="carouselExampleControls" class="carousel slide d-md-block d-lg-none"
-                data-bs-ride="carousel"data-bs-interval="2500">
-                <div class="carousel-inner">
-                    <!-- Tarjeta 1 -->
-                    <div class="carousel-item active">
 
-                        <div class="card mx-auto text-center"style="width: 18rem;">
-
-                            <div class="card-body">
-                                <img src="../resource/1739200178_67aa16b20b63coportunidad%20de%20inversion.svg"width="100%"
-                                    style="padding-left:40px;padding-right:40px" alt="" srcset="">
-                                <p class=" fs-4 fw-bold" style="color:#056679">Oportunidad<br>de inversión
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Tarjeta 2 -->
-                    <div class="carousel-item">
-                        <div class="card mx-auto text-center" style="width: 18rem;">
-                            <div class="card-body">
-                                <img src="../../resource/1739200186_67aa16ba641eaportico.svg"width="100%"
-                                    style="padding-left:40px;padding-right:40px" alt="" srcset="">
-
-                                <p class=" fs-4 fw-bold" style="color:#056679">Pórtico de <br> ingreso</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Tarjeta 3 -->
-                    <div class="carousel-item">
-                        <div class="card mx-auto text-center" style="width: 18rem;">
-                            <div class="card-body">
-                                <img src="../../resource/1739200195_67aa16c37f409juegos%20para%20ni%C3%B1os.svg"width="100%"
-                                    style="padding-left:40px;padding-right:40px" alt="" srcset="">
-                                <p class=" fs-4 fw-bold" style="color:#056679">Juegos<br> para niños</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Tarjeta 4 -->
-                    <div class="carousel-item">
-                        <div class="card mx-auto text-center" style="width: 18rem;">
-                            <div class="card-body">
-                                <img src="../../resource/1739200206_67aa16ce0e38dvigilacia%2024%20horas.svg"width="100%"
-                                    style="padding-left:40px;padding-right:40px" alt="" srcset="">
-                                <p class=" fs-4 fw-bold" style="color:#056679">Vigilancia <br>24 horas</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
-            </div>
-
-            <!-- Tarjetas para tamaños lg y xl -->
-            <div class="container d-none d-lg-block mt-4">
-                <div class="row text-center d-flex justify-content-center">
-                    <div class="col-lg-3 col-xl-2 mb-0">
-                        <div class=" card border-0 ">
-                            <div class="card-body justify-content-center">
-                                <img src="../../resource/1739200178_67aa16b20b63coportunidad%20de%20inversion.svg"width="100%"
-                                    style="" alt="" srcset="">
-                                <p class=" fs-4 fw-bold" style="color:#056679">Oportunidad<br>de inversión</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-xl-2 mb-0">
-                        <div class=" card border-0 ">
-                            <div class="card-body">
-                                <img src="../resource/1739200186_67aa16ba641eaportico.svg"width="100%" style=""
-                                    alt="" srcset="">
-
-                                <p class=" fs-4 fw-bold" style="color:#056679">Pórtico de <br> ingreso</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-xl-2 mb-0">
-                        <div class=" card border-0 ">
-                            <div class="card-body">
-                                <img src="../../resource/1739200195_67aa16c37f409juegos%20para%20ni%C3%B1os.svg"width="100%"
-                                    style="" alt="" srcset="">
-                                <p class=" fs-4 fw-bold" style="color:#056679">Juegos<br> para niños</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-xl-2 mb-0">
-                        <div class=" card border-0 ">
-                            <div class="card-body">
-                                <img src="../../resource/1739200206_67aa16ce0e38dvigilacia%2024%20horas.svg"width="100%"
-                                    style="" alt="" srcset="">
-                                <p class=" fs-4 fw-bold" style="color:#056679">Vigilancia <br>24 horas</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-
-   
-    <div class="my-0 " data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
+    {{-- <div class="my-0 " data-aos="flip-left" data-aos-duration="1300" data-aos-delay="500">
         <div class="sliding-wrapper position-relative overflow-hidden">
             <div class="slide-background d-flex w-100">
 
@@ -273,18 +104,18 @@
 
             </div>
         </div>
-    </div>
-
-   
+    </div> --}}
 
 
 
 
-    <div class="pt-5 pb-2 d-flex justify-content-center align-items-center text-center"
+
+
+    {{-- <div class="pt-5 pb-2 d-flex justify-content-center align-items-center text-center"
         style="position: relative;  overflow: hidden;">
 
         <!-- Video de fondo -->
-    
+
 
         <!-- Contenido sobre el video -->
         <div style=" color: white;">
@@ -299,26 +130,26 @@
                             $video_2 = 'video_' . ($i + 1);
                         @endphp
                         @if (!empty($Project->$video_1) || !empty($Project->$video_2))
-                            <button type="button" 
+                            <button type="button"
                                 data-bs-target="#bootstrapCarousel"
-                                data-bs-slide-to="{{ $totalSlides }}" 
-                                class="{{ $totalSlides === 0 ? 'active' : '' }}" 
-                                aria-current="{{ $totalSlides === 0 ? 'true' : '' }}" 
-                                aria-label="Diapositiva {{ $totalSlides + 1 }}" 
-                                style="background-color: transparent; 
-                                    border: solid 3px orange; 
-                                    width: 15px; 
-                                    height: 15px; 
-                                    border-top: none; 
+                                data-bs-slide-to="{{ $totalSlides }}"
+                                class="{{ $totalSlides === 0 ? 'active' : '' }}"
+                                aria-current="{{ $totalSlides === 0 ? 'true' : '' }}"
+                                aria-label="Diapositiva {{ $totalSlides + 1 }}"
+                                style="background-color: transparent;
+                                    border: solid 3px orange;
+                                    width: 15px;
+                                    height: 15px;
+                                    border-top: none;
                                     border-right: none;
-                                    transform: rotate(135deg); 
+                                    transform: rotate(135deg);
                                     margin-right: 20px;">
                             </button>
                             @php $totalSlides++; @endphp
                         @endif
                     @endfor
                 </div>
-                
+
 
                 <!-- Contenido del Carrusel -->
                 <div class="carousel-inner">
@@ -374,7 +205,7 @@
 
 
         </div>
-    </div>
+    </div> --}}
 
 
 
@@ -432,7 +263,7 @@
             <span style="color:#03424E">CONOCE </span><br> {{ Str::upper($Project->title) }}
         </h4>
         <div class="subrayado mx-auto " style="margin-top:-13px"></div>
-       
+
         <div class="mt-4 row g-4 text-center align-content-center justify-content-center">
             <!-- Card 1 -->
             @for ($i = 1; $i <= 10; $i++)

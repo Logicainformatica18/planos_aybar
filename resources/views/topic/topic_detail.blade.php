@@ -2,7 +2,9 @@
 @section("content")
 
 
-<section class="  text-white" style="background-color: #F6A42C">
+<section class="py-5  text-white" style="background-color: #054E5C">
+    <p>&nbsp; </p>
+
   <div class="container BG-WA ">
       <div class="row justify-content-center pt-1 align-items-center text-center" style="height: 80px;">
           <h3 style="word-spacing: 8px;letter-spacing:2px">
@@ -28,7 +30,7 @@
 </div>
 
 
-<div id="disqus_thread"></div>
+{{-- <div id="disqus_thread"></div>
 <script>
     /**
      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -48,7 +50,7 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a
-        href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> --}}
     </div>
 
 
