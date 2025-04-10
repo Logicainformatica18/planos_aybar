@@ -32,7 +32,7 @@ class PermissionsSeeder extends Seeder
         Permission::create(['name' => 'editar']);
         Permission::create(['name' => 'actualizar']);
         Permission::create(['name' => 'eliminar']);
-
+        Role::create(['name' => 'Visualizacion']);
         $role0 = Role::create(['name' => 'Asistente']);
 
         // Asignar todos los permisos menos "usuarios" y "administrar"
@@ -69,7 +69,70 @@ class PermissionsSeeder extends Seeder
             'email' => 'admin1@gmail.com',
         ]);
 
+        $users = [
+            [
+                'dni' => '99999999',
+                'lastname' => 'Williamzon',
+                'name' => 'Stephany',
+                'username' => 'Stephany',
+                'phone' => '99999999',
+                'email' => 'auxiliaradministrativo@aybarsac.com',
+                'role' => 'Visualizacion'
+            ],
+            [
+                'dni' => '99999999',
+                'lastname' => 'Contreras',
+                'name' => 'Diego',
+                'username' => 'Diego',
+                'phone' => '99999999',
+                'email' => 'josecontreras@aybarsac.com',
+                'role' => 'Visualizacion'
+            ],
+            [
+                'dni' => '99999999',
+                'lastname' => 'Hernandez',
+                'name' => 'Mayra',
+                'username' => 'Mayra',
+                'phone' => '99999999',
+                'email' => 'mayrahernandez@credilotesperu.com',
+                'role' => 'Administrador'
+            ],
+            [
+                'dni' => '99999999',
+                'lastname' => 'Ramirez',
+                'name' => 'Yuliana',
+                'username' => 'Yuliana',
+                'phone' => '99999999',
+                'email' => 'YULIANARAMIREZ@aybarsac.com',
+                'role' => 'Administrador'
+            ],
+            [
+                'dni' => '99999999',
+                'lastname' => 'SANDOVAL',
+                'name' => 'AXELL',
+                'username' => 'AXELL',
+                'phone' => '99999999',
+                'email' => 'axellsandoval@aybarsac.com',
+                'role' => 'Administrador'
+            ],
+        ];
 
+        foreach ($users as $data) {
+            $user = User::firstOrCreate(
+                ['email' => $data['email']],
+                [
+                    'dni' => $data['dni'],
+                    'lastname' => $data['lastname'],
+                    'names' => $data['name'],
+                    'firstname' => $data['username'],
+                    'cellphone' => $data['phone'],
+                    'email'=> $data['email'],
+                    'password' => Hash::make('12345678'), // Puedes cambiarlo
+                ]
+            );
+
+            $user->assignRole($data['role']);
+        }
     }
 
 }

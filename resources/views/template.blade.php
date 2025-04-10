@@ -2225,36 +2225,47 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            // Inicializar el editor Summernote extendido
-            $('#my-textarea').summernote({
-                height: 400, // Altura del editor
-                placeholder: 'Escribe algo aquí...',
-                toolbar: [
-                    ['style', ['style']],
-                    ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript',
-                        'subscript', 'clear'
-                    ]],
-                    ['fontname', ['fontname']],
-                    ['fontsize', ['fontsize']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['table', ['table']],
-                    ['insert', ['link', 'picture', 'video', 'hr']],
-                    ['view', ['fullscreen', 'codeview', 'help']],
-                    ['history', ['undo', 'redo']]
-                ],
-                fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact',
-                    'Tahoma', 'Times New Roman', 'Verdana', 'Manrope', 'Montserrat', 'Montserrat-Bold',
-                    'Montserrat-SemiBold', 'Montserrat-Regular'
-                ], // Agrega Montserrat aquí
-                fontNamesIgnoreCheck: ['Montserrat', 'Montserrat-Regular', 'Montserrat-Bold',
-                    'Montserrat-SemiBold'
-                ] // Ignora el chequeo para la fuente personalizada
+  $(document).ready(function () {
+    $('#my-textarea').summernote({
+        height: 400,
+        placeholder: 'Escribe algo aquí...',
+        codeviewFilter: false, // desactiva sanitizado automático
+        codeviewIframeFilter: false, // permite iframes desde código fuente
+        toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
+            ['fontname', ['fontname']],
+            ['fontsize', ['fontsize']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video', 'hr']],
+            ['view', ['fullscreen', 'codeview', 'help']],
+            ['history', ['undo', 'redo']]
+        ],
+        fontNames: [
+            'Arial', 'Arial Black', 'Comic Sans MS', 'Courier New', 'Helvetica', 'Impact',
+            'Tahoma', 'Times New Roman', 'Verdana', 'Manrope', 'Montserrat', 'Montserrat-Bold',
+            'Montserrat-SemiBold', 'Montserrat-Regular'
+        ],
+        fontNamesIgnoreCheck: [
+            'Montserrat', 'Montserrat-Regular', 'Montserrat-Bold', 'Montserrat-SemiBold'
+        ],
+        callbacks: {
+            onPaste: function (e) {
+                const clipboardData = ((e.originalEvent || e).clipboardData || window.clipboardData);
+                const pastedData = clipboardData.getData('text/html');
 
+                // Si el contenido tiene iframe, se inserta manualmente
+                if (pastedData && pastedData.includes('<iframe')) {
+                    e.preventDefault();
+                    document.execCommand('insertHTML', false, pastedData);
+                }
+            }
+        }
+    });
+});
 
-            });
-        });
     </script>
     <script>
         function reset_textarea() {
@@ -2268,6 +2279,11 @@
         $(function() {
             $('.select2').select2()
         });
+
+
+
+
+
     </script>
 
 
