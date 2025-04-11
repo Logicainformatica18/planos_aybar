@@ -31,8 +31,7 @@
                 <!-- start File export -->
                 <div class="card">
                     <div class="card-body">
-                        <form action="" method="post" role="form" id="topic"
-                            name="form"enctype="multipart/form-data">
+                        <form action="" method="post" id="topic" name="topic"enctype="multipart/form-data">
                             <input type="hidden" name="id" id="id">
                             {{ csrf_field() }}
                             <h6>Descripción :</h6>
@@ -73,9 +72,6 @@
                                     <select name="category[]"id="category" class="select2 select2-hidden-accessible"
                                         multiple="" data-placeholder="Any" style="width: 100%;" data-select2-id="1"
                                         tabindex="-1" aria-hidden="true">
-                                        {{-- <option data-select2-id="16" value="1" selected >número 0</option>
-                                        <option data-select2-id="17" value="1" >número 1</option>
-                                        </option> --}}
 
                                         @foreach ($category as $item)
                                             @if ($loop->first)
@@ -95,7 +91,7 @@
                             </p>
                             <h6>Contenido :</h6>
                             <textarea id="my-textarea"style="height:'900px'" name="post">
-                 
+
                           </textarea>
                             <br>
                             <h6>Detalle : </h6>
@@ -115,7 +111,7 @@
 
                         </p>
                         <p class="card-subtitle mb-3">
-                           
+
                         </p>
                         <div class="mb-2">
                             <h4 class="card-title mb-0">Exportar</h4>

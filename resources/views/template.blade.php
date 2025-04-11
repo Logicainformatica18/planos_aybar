@@ -21,11 +21,14 @@
     <link rel="stylesheet" href="../assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
 
+
+
+
     <link href="{{ asset('css/template.css') }}" rel="stylesheet">
     <script src="{{ asset('js/user.js') }}"></script>
     <script src="{{ asset('js/category.js') }}"></script>
     <script src="{{ asset('js/section.js') }}"></script>
-    <script src="{{ asset('js/topic.js') }}"></script>
+    <script src="{{ asset('js/topic_1.js') }}"></script>
     <script src="{{ asset('js/project.js') }}"></script>
     <script src="{{ asset('js/image.js') }}"></script>
     <script src="{{ asset('js/role.js') }}"></script>
@@ -217,11 +220,11 @@
                                             <span class="hide-menu">Ver Proyectos</span>
                                         </a>
                                     </li>
-                                    {{-- <li class="sidebar-item">
+                                    <li class="sidebar-item">
                                         <a class="sidebar-link has-arrow " href="javascript:void(0)"
                                             aria-expanded="false">
                                             <iconify-icon icon="solar:shield-user-line-duotone"></iconify-icon>
-                                            <span class="hide-menu">Documentación</span>
+                                            <span class="hide-menu">Tutorial</span>
                                         </a>
                                         <ul aria-expanded="false" class="collapse first-level">
                                             <li class="sidebar-item">
@@ -233,7 +236,7 @@
 
 
                                         </ul>
-                                    </li> --}}
+                                    </li>
                                 </ul>
                             </nav>
 

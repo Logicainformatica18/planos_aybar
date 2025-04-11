@@ -147,7 +147,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 
-    Route::resource("admin/blog", App\Http\Controllers\TopicController::class)->middleware('permission:administrar|blogs');
+    Route::get("admin/blog", [App\Http\Controllers\TopicController::class,'index'])->middleware('permission:administrar|blogs');
     Route::post('topicStore', [App\Http\Controllers\TopicController::class, 'store'])->middleware('permission:administrar|agregar');
     Route::post('topicEdit', [App\Http\Controllers\TopicController::class, 'edit'])->middleware('permission:administrar|editar');
     Route::post('topicUpdate', [App\Http\Controllers\TopicController::class, 'update'])->middleware('permission:administrar|actualizar');

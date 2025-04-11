@@ -43,8 +43,8 @@ class TopicController extends Controller
 
         return view("topic.topictable", compact("topic"));
     }
-  
- 
+
+
     public function topic_list(Request $request)
     {
 
@@ -117,7 +117,18 @@ class TopicController extends Controller
     public function edit(Request $request)
     {
         $topic = Topic::find($request->id);
-        return $topic;
+
+        $categories = CategoryDetail::where('topic_id', $topic->id)->pluck('category_id');
+
+        return response()->json([
+            'id' => $topic->id,
+            'description' => $topic->description,
+            'detail' => $topic->detail,
+            'post' => $topic->post,
+            'type' => $topic->type,
+            'image_1' => $topic->image_1,
+            'categories' => $categories // 👈 esto es lo que necesitas en JS
+        ]);
     }
 
     /**
@@ -125,27 +136,51 @@ class TopicController extends Controller
      */
     public function update(Request $request)
     {
-        $course_id = Session::get('course_id');
-        $topic = topic::find($request->id);
-        $topic->description = $request->description;
-        $topic->course_id = $course_id;
-        $topic->detail = $request->detail;
-        $topic->post = $request->post;
-        $topic->instruction = $request->instruction;
-        $topic->point = $request->point;
 
 
+            $topic = Topic::findOrFail($request->id);
+
+            $topic->description = $request->description;
+            $topic->user_id = Auth::id();
+            $topic->detail = $request->detail;
+            $topic->post = $request->post;
+            $topic->type = $request->type;
+            $topic->url = Str::slug($request->description, '-') . time();
+
+            // Archivos opcionales
+            if ($request->hasFile('photo')) {
+                $topic->image_1 = fileStore($request->file('photo'), 'resource');
+            }
+
+            if ($request->hasFile('file_1')) {
+                $topic->file_1 = fileStore($request->file('file_1'), 'file');
+            }
+
+            if ($request->hasFile('file_2')) {
+                $topic->file_2 = fileStore($request->file('file_2'), 'file');
+            }
+
+            if ($request->hasFile('resource_1')) {
+                $topic->resource_1 = fileStore($request->file('resource_1'), 'resource');
+            }
+
+            $topic->save();
+
+            // Actualizar las categorías asociadas
+            CategoryDetail::where('topic_id', $topic->id)->delete();
+
+            if (is_array($request->category)) {
+                foreach ($request->category as $categoryId) {
+                    CategoryDetail::create([
+                        'topic_id' => $topic->id,
+                        'category_id' => $categoryId,
+                    ]);
+                }
+            }
+
+         //   return response()->json(['success' => true, 'message' => 'Actualizado correctamente.']);
 
 
-        // if ($request->file('photo') != null) {
-        //    // $table = topic::find($request["id"]);
-        //     fileDestroy($topic->photo, "resource");
-        //     $request->photo = fileStore($request->file('photo'), "resource");
-        //     $topic->photo = $request->photo;
-        // }
-
-
-        $topic->save();
         return $this->create();
     }
 

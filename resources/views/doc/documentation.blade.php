@@ -1,10 +1,10 @@
 @extends('template')
 @section('content')
-   
-       
+
+
 
             <div class="body-wrapper">
-            
+
                     {{-- <div class="card card-body py-3">
                         <div class="row align-items-center">
                             <div class="col-12">
@@ -37,53 +37,28 @@
                                 <div class="wizard-content">
                                     <form action="#" class="tab-wizard wizard-circle">
                                         <!-- Step 1 -->
-                                        <h6>Editar enlaces</h6>
+
                                         <section>
                                             <div class="table-responsive text-center">
-                                                <h3 class="text-primary">Editar enlaces</h3>
-                                                <iframe
-                                                style="border-radius: 10px"
-                                                src="https://drive.google.com/file/d/1IwNFgpF8hai0bk8LWpYtYeqeagLJ4qhb/preview" 
-                                                width="1000px" height="600px" allow="autoplay"></iframe>
-                                        
+                                                <h6>Subida de contenido en el módulo Publicaciones</h6>
+                                                <iframe width="100%" height="315" src="https://www.youtube.com/embed/h0Ae1Hec7TM?si=P7OTXJH1iH1LSa-J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
                                             </div>
-                                          
+
                                         </section>
-                                     
-                                        <h6>Subida de imágenes</h6>
-                                        <section>
-                                            <div class="table-responsive text-center">
-                                                <h3 class="text-primary">Subida de imágenes</h3>
-                                                <iframe
-                                                style="border-radius: 10px"
-                                                src="https://drive.google.com/file/d/1pzfiPWR6o_9JOzoHQ27UugLVFYAlK6WM/preview" 
-                                                width="1000px" height="600px" allow="autoplay"></iframe>
-                                        
-                                            </div>
-                                          
-                                        </section>
-                                        <h6>Cambiar Imágenes</h6>
-                                        <section>
-                                            <div class="table-responsive text-center">
-                                                <h3 class="text-primary">Cambiar Imágenes</h3>
-                                                <iframe
-                                                style="border-radius: 10px"
-                                                src="https://drive.google.com/file/d/1LsgxqkSKREdoK5QHaM5c8mfOdrFpRISM/preview" 
-                                                width="1000px" height="600px" allow="autoplay"></iframe>
-                                        
-                                            </div>
-                                          
-                                        </section>
+
+
+
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-      
-            </div>
-    
 
-           
+            </div>
+
+
+
 
 
 
